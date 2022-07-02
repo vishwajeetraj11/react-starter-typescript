@@ -12,6 +12,7 @@
     "popper.js": "^1.16.1",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
+    "ts-toolbelt": "^9.6.0",
     "utility-types": "^3.10.0"
   },
   "scripts": {
