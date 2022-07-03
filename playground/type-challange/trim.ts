@@ -27,15 +27,15 @@
 //   ? Trim<Rest>
 //   : S;
 
-// A Variation 
+// A Variation
 type WS = ' ' | '\n' | '\t';
 type TrimRight<S extends string> = S extends `${infer Rest}${WS}`
   ? TrimRight<Rest>
   : S;
 type TrimLeft<S extends string> = S extends `${WS}${infer Char}`
-    ? TrimLeft<Char>
-    : S;
-type Trim<S extends string> = TrimLe ft<TrimRight<S>>
+  ? TrimLeft<Char>
+  : S;
+type Trim<S extends string> = TrimLeft<TrimRight<S>>;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils';
