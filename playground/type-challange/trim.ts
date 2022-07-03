@@ -18,13 +18,24 @@
 
 /* _____________ Your Code Here _____________ */
 
-type WS = ' ' | '\t' | '\n';
+// Solution 1
 
-type Trim<S extends string> = S extends `${WS}${infer Rest}`
-  ? Trim<Rest>
-  : S extends `${infer Rest}${WS}`
-  ? Trim<Rest>
+// type WS = ' ' | '\t' | '\n';
+// type Trim<S extends string> = S extends `${WS}${infer Rest}`
+//   ? Trim<Rest>
+//   : S extends `${infer Rest}${WS}`
+//   ? Trim<Rest>
+//   : S;
+
+// A Variation 
+type WS = ' ' | '\n' | '\t';
+type TrimRight<S extends string> = S extends `${infer Rest}${WS}`
+  ? TrimRight<Rest>
   : S;
+type TrimLeft<S extends string> = S extends `${WS}${infer Char}`
+    ? TrimLeft<Char>
+    : S;
+type Trim<S extends string> = TrimLe ft<TrimRight<S>>
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils';
