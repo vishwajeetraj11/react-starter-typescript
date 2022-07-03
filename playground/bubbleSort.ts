@@ -67,5 +67,5 @@ function bubbleSort(input: number[], curr: number = 0): number[] {
 
 bubbleSort([234, 43, 55, 63, 5, 6, 235, 547]);
 
-type x = M.Sub<100, 22>;
-type s = M.Comparator<100, 22>;
+type x = M.Sub<10, 22>;
+type s = M.Comparator<10, 22>;
