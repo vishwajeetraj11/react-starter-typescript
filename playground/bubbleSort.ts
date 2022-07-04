@@ -1,5 +1,5 @@
 // Type level bubble sort algorithm
-// https://twitter.com/anuraghazra
+// https://twitter.com/anuraghazru
 
 type BubbleSort<
   A extends any[],
